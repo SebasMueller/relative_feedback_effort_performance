@@ -7,10 +7,43 @@ Created on Tue Sep  4 11:50:50 2018
 """
 import os
 import pandas as pd
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 import seaborn as sns
-
 from utils import myutils
+
+
+def set_plotting_style():
+    # Set plotting style
+    sns.set(style="ticks", palette="bright", context='paper',
+            rc={"lines.linewidth": 0.3, 'axes.linewidth': 0.1,
+                'xtick.major.size': 2, 'xtick.major.width': 0.1, 'xtick.labelsize': 7,
+                'ytick.major.size': 2, 'ytick.major.width': 0.1, 'ytick.labelsize': 7,
+                'legend.fontsize': 7, 'font.size': 7})
+    mpl.rcParams['font.size'] = 6
+    mpl.rcParams['axes.titlesize'] = 8
+    mpl.rcParams['axes.labelsize'] = 8
+    mpl.rcParams['xtick.labelsize'] = 6
+    mpl.rcParams['ytick.labelsize'] = 6
+    mpl.rcParams['legend.fontsize'] = 6
+    mpl.rcParams['axes.linewidth'] = 0.25
+    mpl.rcParams['xtick.major.size'] = 2
+    mpl.rcParams['ytick.major.width'] = 0.25
+    mpl.rcParams['ytick.major.size'] = 2
+    mpl.rcParams['xtick.major.width'] = 0.25
+    mpl.rcParams['xtick.major.pad'] = '4'
+    mpl.rcParams['ytick.major.pad'] = '4'
+    mpl.rcParams['xtick.minor.size'] = 2
+    mpl.rcParams['ytick.minor.width'] = 0.25
+    mpl.rcParams['ytick.minor.size'] = 2
+    mpl.rcParams['xtick.minor.width'] = 0.25
+    # mpl.rcParams['xtick.direction'] = 'out'
+    # mpl.rcParams['ytick.direction'] = 'out'
+    mpl.rcParams['lines.linewidth'] = 0.25
+    mpl.rcParams['patch.linewidth'] = 0.25
+    mpl.rcParams['lines.markersize'] = 3
+    mpl.rcParams['font.family'] = 'sans-serif'
+    mpl.rcParams['font.sans-serif'] = ['Arial']
 
 def plot_freq_time(df):
     '''Plotting the accumulated number of submissions by time.'''
